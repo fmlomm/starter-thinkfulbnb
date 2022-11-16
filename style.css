@@ -31,8 +31,9 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
+
 
 /* ---  Groups & Items --- */
 
@@ -50,11 +51,15 @@ main img {
   flex: 2;
 }
 
+.col {
+  align-items: center;
+}
+
 /* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
 }
 
@@ -74,9 +79,16 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
+
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
+}
+
+header div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* -------  Search Form ------- */
@@ -104,6 +116,12 @@ form button {
   width: 100%;
 }
 
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +135,81 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+/* media query for header and nav */
+@media all and (min-width: 480px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav {
+    justify-content: center;
+    align-items: center;
+  }
+
+  header nav ul li a:hover {
+    color: #bdbdbd
+  }
+
+  .logo {
+    font-size: 25px;
+    justify-content: center;
+  }
+}
+
+/* media query for vacation form */
+@media all and (min-width: 480px) {
+
+  .vacation-form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .space-between {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px ;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* media query for about */
+@media all and (min-width: 750px) {
+ 
+  .col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .padding {
+    margin: 10px;
+  }
+}
+
+/* media query for ideas */
+
+@media all and (min-width: 750px) {
+  .pic-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .col2 {
+    flex: 1 0 calc(35% - 20px);
+    margin: 5px;
+  }
+
+  .padding {
+    margin: 10px;
+  }
+
+}
