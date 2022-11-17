@@ -65,7 +65,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 60px;
   color: #fff;
 }
 
@@ -166,6 +166,7 @@ footer p {
   .vacation-form {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .space-between {
@@ -196,7 +197,7 @@ footer p {
 
 /* media query for ideas */
 
-@media all and (min-width: 750px) {
+@media all and (min-width: 480px) {
   .pic-grid {
     display: flex;
     flex-wrap: wrap;
